@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from "react"
+import { Route, Switch, Redirect, withRouter } from "react-router-dom"
 
-function App() {
+import Layout from "./features/layout/layout"
+
+// Lazy imports containers
+const Home = React.lazy(() => {
+  return import("./features/containers/Home/home")
+})
+const Login = React.lazy(() => {
+  return import("./features/containers/Auth/login")
+})
+
+const App = () => {
+  //No auth routes
+  const routes = (
+    <Switch>
+      <Route path="/auth" render={props => <Login {...props} />} />
+      <Route path="/" exact component={Home} />
+      <Redirect to="/" />
+    </Switch>
+  )
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Layout>
+        <Suspense fallback={<p>Loading...</p>}>{routes}</Suspense>
+      </Layout>
+    </>
+  )
 }
 
-export default App;
+export default withRouter(App)
