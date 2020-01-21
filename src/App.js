@@ -3,6 +3,8 @@ import { Route, Switch, Redirect, withRouter } from "react-router-dom"
 
 import Layout from "./features/layout/layout"
 
+import "./App.css"
+
 // Lazy imports containers
 const Home = React.lazy(() => {
   return import("./features/containers/Home/home")
