@@ -7,7 +7,7 @@ import "./App.css"
 
 // Lazy imports containers
 const Home = React.lazy(() => {
-  return import("./features/containers/Home/home")
+  return import("./features/containers/Home/components/home")
 })
 const Login = React.lazy(() => {
   return import("./features/containers/Auth/login")
