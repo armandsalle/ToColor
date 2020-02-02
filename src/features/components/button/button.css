@@ -1,0 +1,25 @@
+.button {
+  padding: 8px 10px;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button.success {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+
+.button.error {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+.button:disabled {
+  background-color: var(--color-grey-light);
+  color: var(--color-grey);
+}

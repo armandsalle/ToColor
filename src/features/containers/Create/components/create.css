@@ -1,0 +1,69 @@
+.create-section {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.create-section .sub-title {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.create-section .create-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-section .create-palette {
+  width: 100%;
+  margin-bottom: 3.2rem;
+}
+
+.create-section .create-palette .create-color {
+  width: 100%;
+  height: 7rem;
+  position: relative;
+}
+
+.create-section .create-palette .create-color p {
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--color-white);
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 9px;
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+
+.create-section .create-palette .create-color:first-child {
+  height: 10rem;
+}
+
+.color-picker {
+  background-color: #ffffff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+}
+
+.create-section .create-palette .create-color .new-color {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}

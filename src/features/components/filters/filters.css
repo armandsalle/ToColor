@@ -1,0 +1,22 @@
+.filters {
+  text-align: center;
+  margin: 0 auto 4rem auto;
+  display: inline-flex;
+}
+
+.filters p.filtre {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 18px;
+  margin-right: 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filters p.filtre:last-child {
+  margin-right: 0;
+}
+
+.filters p.filtre.active {
+  text-decoration: underline;
+}

@@ -1,0 +1,58 @@
+nav {
+    margin-top: 1.6rem;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav .logo a {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+nav .nav-items {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav .nav-items a,
+.logout {
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin-right: 1.6rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+nav .nav-items a:last-child {
+    margin-right: 0;
+}
+
+nav .nav-dots {
+    position: relative;
+    cursor: pointer;
+}
+
+nav .nav-dots .svg-container {
+    padding: 1rem;
+}
+
+nav .nav-dots svg {
+    fill: var(--color-black);
+}
+
+nav .nav-dots .menu {
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-grey);
+    padding: 1.6rem;
+}
+
+nav .nav-dots .menu>*:not(:last-child) {
+    margin-bottom: 1rem;
+}
